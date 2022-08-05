@@ -9,7 +9,15 @@
   <body>
     <div class="container">
       <section class="sidebar">
-        <h1 class="title">Dashboard</h1>
+        <div class="sidebar-title">
+          <svg width="48px" height="48px" viewBox="0 0 24 24">
+            <path
+              fill="whitesmoke"
+              d="M2,5V19H8V5H2M9,5V10H15V5H9M16,5V14H22V5H16M9,11V19H15V11H9M16,15V19H22V15H16Z"
+            />
+          </svg>
+          <h1 class="title">Dashboard</h1>
+        </div>
 
         <ul class="sidebar-functions-list">
           <li>Home</li>
@@ -24,6 +32,10 @@
           <li>Support</li>
           <li>Privacy</li>
         </ul>
+
+        <!-- <a href="https://www.freepik.com/vectors/portrait-illustration"
+          >Portrait illustration vector created by freepik - www.freepik.com</a
+        > -->
       </section>
 
       <header class="header">
@@ -55,24 +67,28 @@
               />
             </svg>
 
-            <img
-              class="small-dp"
-              src="./img/dp.png"
-              alt="Profile picture of the user"
-            />
-            <p class="user-name">Morgan Oakley</p>
+            <div class="user">
+              <img
+                class="small-dp"
+                src="./img/dp.png"
+                alt="Profile picture of the user"
+              />
+              <p class="user-name">Morgan Oakley</p>
+            </div>
           </div>
         </section>
 
         <div class="header-bottom">
-          <div class="hello-grid">
+          <div class="hello-flex">
             <img
               class="big-dp"
               src="./img/dp.png"
               alt="Profile picture of the user, enlarged"
             />
-            <p class="hello">Hi there,</p>
-            <p class="hello-user">Morgan Oakley (@morgan)</p>
+            <div class="hello-text">
+              <p class="hello">Hi there,</p>
+              <p class="hello-user">Morgan Oakley (@morgan)</p>
+            </div>
           </div>
 
           <div class="header-buttons">
