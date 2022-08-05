@@ -41,7 +41,6 @@ body {
   background-color: rgb(255, 104, 129);
 
   z-index: 3;
-  /* border: green 5px solid; */
 }
 
 .sidebar-title {
@@ -54,23 +53,18 @@ body {
 
 .sidebar .title {
   font-size: 2.5em;
-  /* color: rgb(253, 80, 108); */
   color: pink;
   color: whitesmoke;
-
-  /* probably unnecessary */
-  /* text-indent: 2ch; */
 }
 
 .sidebar-functions-list {
   list-style: none;
-  /* text-indent: 1ch; */
   padding: 0em 0ch 0em 5ch;
 }
 
 .sidebar-functions-list li {
   font-size: 1.5em;
-  line-height: 4ch;
+  line-height: 3.6ch;
 
   color: whitesmoke;
   font-weight: bold;
@@ -90,10 +84,7 @@ body {
 
   box-shadow: 0 1px 5px 5px lightgray;
 
-  /* padding: 0em 0em; */
-
   z-index: 2;
-  /* border: red 5px solid; */
 }
 
 .header-top {
@@ -104,16 +95,12 @@ body {
   gap: 1em;
 
   padding: 1em 4em 1em 4em;
-  /* border: maroon 5px solid; */
 }
 
 .header-search {
   display: flex;
   gap: 1em;
   align-items: center;
-
-  /* margin-top: 1em; */
-  /* margin-right: 24em; */
 }
 
 .search-bar {
@@ -124,7 +111,6 @@ body {
   text-indent: 2ch;
   font-size: 1em;
 
-  /* border: lightpink 2px solid; */
   border: none;
   border-radius: 10px;
 
@@ -246,17 +232,11 @@ input[type="search"]:focus-visible::-webkit-search-cancel-button {
   background-color: rgb(236, 236, 236);
 
   z-index: 1;
-  /* border: blue 5px solid; */
 }
 
-.user-projects {
-  grid-row: 2 / 5;
-
-  display: grid;
-  grid-template: repeat(3, 1fr) / repeat(2, 1fr);
-
-  /* border: yellow 5px solid; */
-}
+/* ///////////////////////////////// */
+/* ///////////// PROJECTS //////////// */
+/* ///////////////////////////////// */
 
 .projects-title {
   grid-column: 1 / 2;
@@ -267,10 +247,16 @@ input[type="search"]:focus-visible::-webkit-search-cancel-button {
   margin: 1em 0em 0em 0em;
 }
 
-.user-projects .card {
-  /* height: 20em; */
-  margin: 0em 2em 2.5em 2em;
-  padding: 3em 2em 4em 2em;
+.user-projects {
+  grid-row: 2 / 5;
+
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+}
+
+.card {
+  margin: 2.5em 2em 0 2em;
+  padding: 3em 2em 1.6em 2em;
 
   border-radius: 0.8em;
   border-left: 0.8em solid rgb(255, 104, 129);
@@ -278,21 +264,57 @@ input[type="search"]:focus-visible::-webkit-search-cancel-button {
   background-color: white;
 
   box-shadow: 2px 5px 5px 1px lightgray;
-  /* border: pink 5px solid; */
+}
+
+.card:first-child {
+  margin: 0em 2em 0em 2em;
+}
+
+.card:nth-child(2) {
+  margin: 0em 2em 0em 2em;
 }
 
 .card-title {
   font-size: 1.5em;
   margin: 0;
+  margin-bottom: 0.9em;
 }
 
 .card-content {
   margin: 0;
 }
 
-.card .card-functions {
+.card-functions {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+
+  gap: 1em;
+
+  margin-top: 2em;
+}
+
+.card-functions > img {
+  width: 30px;
+  padding: 4px;
+}
+
+.card-functions > img:hover {
+  cursor: pointer;
+  background-color: #ece8e8;
+  border-radius: 50%;
+}
+
+/* ///////////////////////////////// */
+/* ///////////// ANNOUNCEMENTS ///// */
+/* ///////////////////////////////// */
+
+.announcements-title {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+
+  padding: 0em 0em 0em 1em;
+  margin: 1em 0em 0em 0em;
 }
 
 .announcements {
@@ -303,23 +325,12 @@ input[type="search"]:focus-visible::-webkit-search-cancel-button {
   border-radius: 0.8em;
 
   box-shadow: 2px 5px 5px 1px lightgray;
-  /* border: lightgreen 5px solid; */
-}
-
-.announcements-title {
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
-
-  padding: 0em 0em 0em 1em;
-  margin: 1em 0em 0em 0em;
 }
 
 .announcement {
   padding: 1em 0;
 
   border-bottom: 1px #80808060 solid;
-
-  /* border: cyan 5px solid; */
 }
 
 .announcement:last-child {
@@ -329,7 +340,12 @@ input[type="search"]:focus-visible::-webkit-search-cancel-button {
 .announce-title {
   font-size: 1em;
   margin: 0;
+  margin-top: 0.5em;
 }
+
+/* ///////////////////////////////// */
+/* ///////////// TRENDING ////////// */
+/* ///////////////////////////////// */
 
 .trending-title {
   grid-row: 3 / 4;
@@ -346,21 +362,17 @@ input[type="search"]:focus-visible::-webkit-search-cancel-button {
   background-color: white;
 
   box-shadow: 2px 5px 5px 1px lightgray;
-  /* border: orange 5px solid; */
 }
 
 .trending-user {
-  /* padding: 1em 1em 0em 1em; */
-
   display: flex;
   align-items: center;
   gap: 1em;
 
   margin: 2em 0em;
-  /* border: rebeccapurple 5px solid; */
 }
 
-.trending-user .user-text {
+.user-text {
   display: flex;
   flex-direction: column;
 }
@@ -369,6 +381,6 @@ input[type="search"]:focus-visible::-webkit-search-cancel-button {
   margin: 0.2em 0;
 }
 
-.user-text .user-handle {
+.user-handle {
   font-weight: 500;
 }
