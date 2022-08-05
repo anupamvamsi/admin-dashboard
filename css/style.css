@@ -115,11 +115,15 @@ body {
   width: 100%;
   min-width: 50vw;
   height: 2em;
+
   text-indent: 2ch;
   font-size: 1em;
-  /* width: clamp(100%, 48em, 48em); */
-  border: lightpink 2px solid;
+
+  /* border: lightpink 2px solid; */
+  border: none;
   border-radius: 10px;
+
+  background-color: rgb(255, 221, 226);
 }
 
 /* https://stackoverflow.com/questions/20804016/editing-input-type-search-pseudo-element-button-x */
@@ -204,6 +208,24 @@ input[type="search"]:focus-visible::-webkit-search-cancel-button {
   font-size: 2em;
   font-weight: bold;
   margin: 0;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 2em;
+}
+
+.header-buttons button {
+  background-color: rgb(255, 104, 129);
+
+  border: none;
+  border-radius: 2em;
+
+  padding: 0.8em 2em;
+
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 1em;
 }
 
 /* ///////////////////////////////// */
