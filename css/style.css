@@ -8,6 +8,11 @@ html {
   font-size: 1em;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 /* ///////////////////////////////// */
 /* ///////////// CONTAINER ///////// */
 /* ///////////////////////////////// */
@@ -15,9 +20,7 @@ html {
 .container {
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr 8fr;
-
-  /* border: blue 5px solid; */
+  grid-template-rows: 0.5fr 3fr;
 }
 
 /* ///////////////////////////////// */
@@ -30,7 +33,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  border: green 5px solid;
+  /* border: green 5px solid; */
 }
 
 .sidebar .title {
@@ -52,13 +55,13 @@ html {
   display: grid;
   grid-template-rows: 1fr 1.5fr;
 
-  border: red 5px solid;
+  /* border: red 5px solid; */
 }
 
 .header-top {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
 
   gap: 1em;
 
@@ -72,7 +75,7 @@ html {
   display: flex;
   gap: 1em;
 
-  margin-top: 1em;
+  /* margin-top: 1em; */
   /* margin-right: 24em; */
 }
 
@@ -122,3 +125,67 @@ html {
 /* ///////////////////////////////// */
 /* ///////////// MAIN ////////////// */
 /* ///////////////////////////////// */
+
+.main-content {
+  display: grid;
+  grid-template: 0.5fr 0.5fr / 3fr 1fr;
+  /* border: blue 5px solid; */
+}
+
+.user-projects {
+  grid-row: 1 / 3;
+
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+
+  /* border: yellow 5px solid; */
+}
+
+.user-projects .card {
+  /* height: 20em; */
+  padding: 2em;
+  margin: 1em;
+  /* border: pink 5px solid; */
+}
+
+.card-title {
+  font-size: 1.5em;
+}
+
+.card .card-functions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.announcements {
+  margin: 1em;
+  /* border: lightgreen 5px solid; */
+}
+
+.announcement {
+  padding: 1em;
+  /* border: cyan 5px solid; */
+}
+
+.announce-title {
+  font-size: 1em;
+}
+
+.trending {
+  margin: 1em;
+  /* border: orange 5px solid; */
+}
+
+.trending-user {
+  padding: 1em;
+
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  /* border: rebeccapurple 5px solid; */
+}
+
+.trending-user .user-text {
+  display: flex;
+  flex-direction: column;
+}
