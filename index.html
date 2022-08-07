@@ -6,11 +6,12 @@
     <title>Admin Dashboard</title>
     <!-- <link rel="stylesheet" href="./css/reset.css" /> -->
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/media-queries.css" />
   </head>
 
   <body>
     <div class="container">
-      <section class="sidebar">
+      <section class="sidebar" id="topnav">
         <div class="sidebar-title">
           <svg width="48px" height="48px" viewBox="0 0 24 24">
             <title>Dashboard</title>
@@ -23,7 +24,7 @@
           <h1 class="title">Dashboard</h1>
         </div>
 
-        <ul class="sidebar-functions-list">
+        <ul class="sidebar-functions-list" id="links">
           <li>
             <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
               <title>Home</title>
@@ -90,10 +91,7 @@
             </svg>
             Communities
           </li>
-        </ul>
-        <!-- <br />
-          <br /> -->
-        <ul class="sidebar-general-list">
+
           <li>
             <svg style="width: 22px; height: 22px" viewBox="0 0 24 24">
               <title>Settings</title>
@@ -128,7 +126,19 @@
             Privacy
           </li>
         </ul>
+        <!-- <br />
+          <br /> -->
+        <!-- <ul class="sidebar-general-list" id="links"></ul> -->
 
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <svg style="width: 32px; height: 32px" viewBox="0 0 24 24">
+            <path
+              id="chevron"
+              fill="currentColor"
+              d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
+            />
+          </svg>
+        </a>
         <!-- <a href="https://www.freepik.com/vectors/portrait-illustration"
           >Portrait illustration vector created by freepik - www.freepik.com</a
         > -->
@@ -183,7 +193,7 @@
             />
             <div class="hello-text">
               <p class="hello">Hi there,</p>
-              <p class="hello-user">Morgan Oakley (@morgan)</p>
+              <p class="hello-user">Morgan (@morgan)</p>
             </div>
           </div>
 
@@ -437,5 +447,26 @@
         </section>
       </main>
     </div>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("links");
+        var y = document.getElementById("chevron");
+
+        if (x.style.display === "flex") {
+          x.style.display = "none";
+          y.setAttribute(
+            "d",
+            "M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
+          );
+        } else {
+          x.style.display = "flex";
+          y.setAttribute(
+            "d",
+            "M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z"
+          );
+        }
+      }
+    </script>
   </body>
 </html>
